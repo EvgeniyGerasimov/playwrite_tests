@@ -7,7 +7,15 @@ pipeline {
 
 //             sh 'sudo -H pip install pytest-playwright'
 
-            sh 'pytest'
+            sh 'pytest -v'
+            publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'coverage',
+            reportFiles: 'index.html',
+            reportName: 'RCov Report'
+          ]
          }
       }
    }
