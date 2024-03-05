@@ -3,7 +3,7 @@ from pages.base_page import BasePage
 
 server = BasePage.server
 
-ADMIN_URL = f"https://m0t007:m0t007@www{server}.motorsport.com/?edition_force=global"
+ADMIN_URL = f"https://www{server}.motorsport.com/?edition_force=global"
 
 
 @pytest.fixture(scope='function')
