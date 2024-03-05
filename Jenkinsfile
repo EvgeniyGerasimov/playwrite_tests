@@ -7,7 +7,7 @@ pipeline {
 
 //             sh 'sudo -H pip install pytest-playwright'
 
-            sh 'pytest -v'
+            sh 'pytest -v --html=reports/report.html --self-contained-html'
             publishHTML target: [
             allowMissing: false,
             alwaysLinkToLastBuild: false,
