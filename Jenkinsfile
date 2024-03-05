@@ -7,7 +7,7 @@ pipeline {
 
 //             sh 'sudo -H pip install pytest-playwright'
 
-            sh 'pytest -m сhecker -v --alluredir=reports10'
+            sh 'pytest'
          }
       }
    }
