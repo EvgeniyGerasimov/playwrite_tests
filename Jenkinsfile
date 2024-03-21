@@ -4,6 +4,8 @@ pipeline {
       stage('e2e-tests') {
          steps {
             sh 'pytest -v --html=reports/report.html --self-contained-html'
+            sh 'pytest -v --html=reports/report.html --self-contained-html'
+
          }
       }
       stage('reporting'){
