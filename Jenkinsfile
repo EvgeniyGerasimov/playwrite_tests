@@ -3,11 +3,6 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
-//             sh 'sudo pip install -r requirements.txt --user'
-
-
-
-
             sh 'pytest -v --html=reports/report.html --self-contained-html'
          }
       }
