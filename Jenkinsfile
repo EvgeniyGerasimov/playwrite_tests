@@ -5,7 +5,8 @@ pipeline {
          steps {
 //             sh 'sudo pip install -r requirements.txt --user'
 
-//             sh 'sudo -H pip install pytest-playwright'
+
+
 
             sh 'pytest -v --html=reports/report.html --self-contained-html'
          }
