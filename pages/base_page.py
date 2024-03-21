@@ -4,10 +4,10 @@ from playwright.sync_api import expect
 
 
 class BasePage:
-    server = os.getenv('SERVER', "")
+    # server = os.getenv('SERVER', "")
 
     # server = '-s'
-    # server = '-t'
+    server = '-t'
     def __init__(self, page):
         self.page = page
 
