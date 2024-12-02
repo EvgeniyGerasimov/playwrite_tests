@@ -5,6 +5,7 @@ from playwright.sync_api import expect
 
 class BasePage:
     server = os.getenv('SERVER', "")
+    ADMIN_URL = f"https://m0s0n07:m0s0n07@www{server}.motorsport.com/"
 
     # server = '-s'
     # server = '-t'
