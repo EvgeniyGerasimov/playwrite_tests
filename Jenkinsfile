@@ -3,10 +3,7 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
-            sh 'pytest -v'
-            sh 'pytest -v --html=reports/report.html --self-contained-html'
-            sh 'pytest -v --html=reports/report.html --self-contained-html'
-            sh 'pytest -v --html=reports/report.html --self-contained-html'
+            sh 'pytest --html=reports/report.html --self-contained-html'
          }
       }
       stage('reporting'){

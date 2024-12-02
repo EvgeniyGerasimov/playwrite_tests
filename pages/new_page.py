@@ -7,10 +7,7 @@ class NewPage(BasePage):
     editions = (
         'www',
         'tr',
-        'us',
         'lat',
-        'espanol',
-        'br',
         'jp',
     )
 
@@ -32,7 +29,10 @@ class NewPage(BasePage):
                 url = 'https://www.autosport.com/'
         else:
             url = f'https://m0t007:m0t007@{edition}{self.server}.motorsport.com/'
-        self.page.goto(url, wait_until="load")
+        self.page.on("console", lambda msg: print(f"Console log: {msg.text}"))
+        response = self.page.goto(url, wait_until="load")
+        if response and response.status != 200:
+            raise Exception(f"Failed to load page: {response.status}")
 
     def get_url_list(self, loc):
         path_list = []
