@@ -8,7 +8,7 @@ ADMIN_URL = f"https://www{server}.motorsport.com/?edition_force=global"
 
 @pytest.fixture(scope='function')
 def setUp(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context(base_url=ADMIN_URL)
     page = context.new_page()
     yield page
