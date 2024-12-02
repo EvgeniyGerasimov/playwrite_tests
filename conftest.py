@@ -3,7 +3,7 @@ import os
 from pages.base_page import BasePage
 
 server = BasePage.server
-headless = os.getenv('HEADLESS', False)
+headless = os.getenv('HEADLESS', 'False') == 'True'
 
 @pytest.fixture(scope='function')
 def setUp(playwright):
