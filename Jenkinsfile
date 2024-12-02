@@ -1,7 +1,7 @@
 pipeline {
    agent { dockerfile true }
    environment {
-       HEADLESS = 'True'
+       HEADLESS = True
    }
    stages {
       stage('e2e-tests') {
