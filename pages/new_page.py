@@ -32,7 +32,7 @@ class NewPage(BasePage):
                 url = 'https://www.autosport.com/'
         else:
             url = f'https://m0t007:m0t007@{edition}{self.server}.motorsport.com/'
-        self.page.goto(url)
+        self.page.goto(url, wait_until="load")
 
     def get_url_list(self, loc):
         path_list = []
