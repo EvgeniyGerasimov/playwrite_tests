@@ -10,6 +10,6 @@ def setUp(playwright):
     browser = playwright.chromium.launch(headless=headless)
     context = browser.new_context()
     page = context.new_page()
-    page.goto(BasePage.ADMIN_URL, wait_until="load")
+    page.goto(BasePage.ADMIN_URL, wait_until="domcontentloaded")
     yield page
     browser.close()
