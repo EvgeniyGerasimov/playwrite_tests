@@ -6,6 +6,7 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
+         //updated file
             sh 'pytest --html=reports/report.html --self-contained-html'
          }
       }
